@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args)
 	{
 		
-		Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);//
 		System.out.println("How long do you want the array?");
 		int length = scan.nextInt();
 		double sum = 0;
