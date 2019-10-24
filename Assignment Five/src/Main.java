@@ -1,11 +1,14 @@
 import java.util.Scanner;
+
+import javax.lang.model.util.ElementScanner6;
+
 import java.lang.Math;
 
 public class Main {
 
 	public static void main(String[] args)
 	{
-		
+		Main calculate = new Main();
 		Scanner scan = new Scanner(System.in);//
 		System.out.println("How long do you want the array?");
 		int length = scan.nextInt();
@@ -44,43 +47,54 @@ public class Main {
 			
 			}
 			
-			double[] finalarray = new double[array.length];
-			int index = 0;
 
-			for(int z = array.length-1; z>=0; z--)
-			{
-				double flag = -1;
-
-				for(int x = 0; x<(array.length); x++)
-				{
-					if(array[x] > flag)
-					{
-						index = x;
-						flag = array[x];	
-						
-					}
-				}
-				finalarray[z] = flag;
-				array[index] = 0;
-				
-			}
+			
 			System.out.print("Your array is {");
-			for(int y = 0; y<finalarray.length-1; y++)
+			for(int y = 0; y<array.length-1; y++)
 			{
-				System.out.print(finalarray[y]);
+				System.out.print(array[y]);
 				System.out.print(", ");
 			}
-			System.out.print(finalarray[finalarray.length-1]);
+			System.out.print(array[array.length-1]);
 			System.out.println("}");
-			System.out.println("The average is " + (sum/finalarray.length));
+			System.out.println("The average is " +  (sum/array.length));
 			System.out.println("The range is " + (max-min));
-			System.out.println("The array is sorted in increasing order");
+			System.out.println("The array is " + calculate.Relationship(array));
 			
 		}
 		
 		
 	}
+
+  public String Relationship(double[] array)
+  {
+    boolean decreasingFlag = true;
+    boolean increasingFlag = true;
+    for(int i = 1; i<array.length; i++)
+    {
+      if(array[i] < array[i-1])
+      {
+        increasingFlag = false;
+      }
+      if(array[i] > array[i-1])
+      {
+        decreasingFlag = false;
+      }
+
+    }
+    if(increasingFlag == true)
+    {
+      return "sorted in increasing order";
+    }
+    if(decreasingFlag == true)
+    {
+      return "sorted in decreasing order";
+    }
+    else{
+      return "unsorted";
+    }
+
+
+  }
 	
 }
-
-
