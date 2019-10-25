@@ -1,21 +1,16 @@
 import java.util.Scanner;
 
-import javax.lang.model.util.ElementScanner6;
-
-import java.lang.Math;
-
 public class Main {
 
 	public static void main(String[] args)
 	{
-		Main calculate = new Main();
 		Scanner scan = new Scanner(System.in);//
 		System.out.println("How long do you want the array?");
 		int length = scan.nextInt();
 		double sum = 0;
 		double number = 0;
 		double flag2 = Double.MAX_VALUE;
-		double flag3 = Double.MIN_VALUE;
+		double flag3 = (-Double.MAX_VALUE);
 		double min = 0;
 		double max = 0;
 		
@@ -59,14 +54,14 @@ public class Main {
 			System.out.println("}");
 			System.out.println("The average is " +  (sum/array.length));
 			System.out.println("The range is " + (max-min));
-			System.out.println("The array is " + calculate.Relationship(array));
+			System.out.println("The array is " + Relationship(array));
 			
 		}
 		
 		
 	}
 
-  public String Relationship(double[] array)
+  public static String Relationship(double[] array)
   {
     boolean decreasingFlag = true;
     boolean increasingFlag = true;
