@@ -19,7 +19,7 @@ public class Main {
 		double min = 0;
 		double max = 0;
 		
-		if(Math.abs(length) != length)
+		if(Math.abs(length) != length || length==0)
 		{
 			System.out.println("Not a valid length!");
 		}
