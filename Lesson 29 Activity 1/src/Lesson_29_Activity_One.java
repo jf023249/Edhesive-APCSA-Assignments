@@ -1,6 +1,6 @@
 public class Lesson_29_Activity_One {
 
-    public static String [] list = {"word", "hippo"};
+    public static String [] list = {"hippo", "giraffe"};
 
 	
 	public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class Lesson_29_Activity_One {
 		String maxstring = "";
 		
 		
-		for(int i = 0; i <list.length-1; i++)
+		for(int i = 0; i <list.length; i++)
 		{
 			if(list[i].length() > maxstring.length())
 			{
