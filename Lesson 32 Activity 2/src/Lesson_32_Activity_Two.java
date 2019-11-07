@@ -2,7 +2,7 @@
 public class Lesson_32_Activity_Two {
 
 	
-	public static void monthName(int month)
+	public static void monthDays(int month)
 	{
 		if(month == 1)
 		{
